@@ -6,3 +6,9 @@ kubectl autoscale deployment my-app --max 6 --min 4 --cpu-percent 50
 In this command, the --max flag is required. The --cpu-percent flag is the target CPU utilization over all the Pods. This command does not immediately scale the Deployment to six replicas, unless there is already a systemic demand.
 
 After running kubectl autoscale, the HorizontalPodAutoscaler object is created and targets the application. When there a change in load, the object increases or decreases the application's replicas.
+
+
+
+Stateful Set
+
+Every replica of a stateful set will have its own state, and each of the pods will be creating its own PVC(Persistent Volume Claim). So a statefulset with 3 replicas will create 3 pods, each having its own Volume, so total 3 PVCs.
