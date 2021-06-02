@@ -16,7 +16,7 @@ spec:
         "beta.kubernetes.io/os": windows
       containers:
       - name: 
-        image: strusoftdevopstest.azurecr.io/aspnettest
+        image: devopstest.azurecr.io/aspnettest
         resources:
           limits:
             cpu: 1
